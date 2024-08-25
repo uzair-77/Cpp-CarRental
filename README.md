@@ -1,64 +1,52 @@
 
 # Car Rental System
 
-This repository includes a C++ program for a simple Car Rental System. The program demonstrates the use of classes, inheritance, and basic file operations. It allows users to rent cars and calculates the rental fee based on the selected car model and rental duration.
+Welcome to the Car Rental System repository! This C++ project is designed to showcase a basic yet functional car rental system using object-oriented programming principles. The system simulates a car rental service, where users can select a car model, specify the rental duration, and compute the rental fee.
 
-## Program Overview
+## Project Description
 
-The Car Rental System consists of several classes:
+This project demonstrates the use of classes and inheritance in C++ to build a simple car rental application. It features a user-friendly interface where customers can choose a car from a list, enter rental details, and get a calculated rental fee. The system consists of three primary classes:
 
 1. **Owner Class**
-   - Represents the car owner with attributes such as name, contact number, and address.
-   - **Methods:**
-     - `display()`: Displays the owner's information.
+   - **Purpose**: Represents the car owner and displays owner details.
+   - **Attributes**:
+     - `owner_name`: The name of the car owner.
+     - `contact_number`: The contact number of the car owner.
+     - `owner_address`: The address of the car owner.
+   - **Method**:
+     - `display()`: Outputs the owner's static information.
 
 2. **Car Class**
-   - Represents the car and the customer who wants to rent it.
-   - **Attributes:**
-     - `customer_name`: Name of the customer.
-     - `car_model`: Selected car model.
-     - `carnumber`: Car number (not used in this example).
-   - **Methods:**
-     - `add()`: Placeholder method for adding car details (not implemented).
+   - **Purpose**: Represents a car and customer details.
+   - **Attributes**:
+     - `customer_name`: Name of the customer renting the car.
+     - `car_model`: The selected car model.
+     - `carnumber`: Car number (not used in the current implementation).
+   - **Methods**:
+     - `add()`: A placeholder for adding car details (currently not implemented).
 
 3. **Rental Class** (Derived from `Car`)
-   - Represents the rental transaction.
-   - **Attributes:**
-     - `days`: Number of days the car is rented.
-     - `rentalfee`: Total rental fee.
-   - **Methods:**
-     - `data()`: Collects customer and car rental information.
+   - **Purpose**: Handles the rental process including car selection and fee calculation.
+   - **Attributes**:
+     - `days`: The number of days the car is rented.
+     - `rentalfee`: The total rental fee calculated based on the car model and rental duration.
+   - **Methods**:
+     - `data()`: Collects rental details from the user, including car selection and rental duration.
      - `calculate()`: Computes the rental fee based on the selected car model and rental duration.
-     - `displayrent()`: Displays the rental details and total amount.
+     - `displayrent()`: Displays the rental details and the total rental amount.
 
-## How to Use
+## Features
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/yourrepo.git
-   ```
-2. Navigate to the directory containing the `car_rental_system.cpp` file.
-3. Compile the program using a C++ compiler:
-   ```bash
-   g++ car_rental_system.cpp -o car_rental_system
-   ```
-4. Run the compiled program:
-   ```bash
-   ./car_rental_system
-   ```
+- **Dynamic Car Selection**: Users can choose from a variety of car models, each with a specific rental rate.
+- **Rental Fee Calculation**: Calculates the total rental fee based on the selected car and number of rental days.
+- **User-Friendly Output**: Provides clear and formatted output of rental details and amounts.
 
-## Code Walkthrough
+## Unique Aspects
 
-1. **Owner Class**:
-   - Displays static owner information.
-   
-2. **Car Class**:
-   - Placeholder for car details (not fully implemented in this version).
-
-3. **Rental Class**:
-   - Allows users to select a car, enter rental days, and calculates the rental fee.
-   - Shows the final rental amount along with the details.
+- **Interactive CLI**: Uses a command-line interface to interact with users, making it easy to understand and use.
+- **Sleep and Clear Screen**: Implements `sleep()` and `system("CLS")` to enhance user experience by clearing the screen and providing a pause effect during operations.
+- **Flexible Car Models**: Includes a wide range of car models to choose from, each with a different rental rate, showcasing a real-world application of conditional logic.
 
 ## License
 
-This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the MIT License. For more details, see the [LICENSE](LICENSE) file included in this repository.
